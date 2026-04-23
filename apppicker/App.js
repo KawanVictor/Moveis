@@ -43,7 +43,12 @@ export default function App() {
             <Picker.Item label="JavaScript" value="JavaScript" />
             <Picker.Item label="Python" value="Python" />
             <Picker.Item label="Java" value="Java" />
+            <Picker.Item label="Golang" value="Golang" />
+            <Picker.Item label="Ruby" value="Ruby" />
+            <Picker.Item label="PHP" value="PHP" />
             <Picker.Item label="C#" value="C#" />
+            <Picker.Item label="Cobol" value="Cobol" />
+
           </Picker>
         </View>
 
@@ -68,12 +73,12 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#eef1f5',
+    backgroundColor: '#e41e17',
   },
 
   /* HEADER */
   header: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#030303',
     padding: 18,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
 
   /* CARD */
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#8aa123',
     margin: 20,
     padding: 20,
     borderRadius: 12,
