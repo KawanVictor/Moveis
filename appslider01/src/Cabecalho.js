@@ -9,13 +9,13 @@ export default function Cabecalho() {
 
       <Image
         source={{
-          uri: "https://tse3.mm.bing.net/th/id/OIP.gu1OTpd4vuoavARPoUzr1wHaHa?pid=ImgDet&w=151&h=151&c=7&o=7&rm=3"
+          uri: "https://tse4.mm.bing.net/th/id/OIP._gZ1HnfhL6DgjTNFPPaXrAHaFj"
         }}
         style={estilos.logo}
       />
 
       <Text style={estilos.textoCabecalho}>
-        Componente Slider
+        São Paulo FC App
       </Text>
 
     </View>

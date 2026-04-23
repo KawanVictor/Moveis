@@ -1,46 +1,7 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableHighlight, Alert } from "react-native";
-import { estilos } from "./stylesheet/estilos";
-import Slider from "@react-native-community/slider";
+return (
+  <View style={[estilos.conteudo, { backgroundColor: corFundo }]}>
 
-export default function Conteudo() {
-
-  const [corFundo, setCorFundo] = useState("#ffffff");
-  const [corTexto, setCorTexto] = useState("#000");
-  const [corInput, setCorInput] = useState("#ffff00");
-  const [nome, setNome] = useState("");
-
-  const texto =
-    "O Slider permite escolher valores arrastando um botão.";
-
-  function verifica() {
-    if (nome !== "") {
-      Alert.alert("Olá " + nome, "Teste os sliders!");
-    } else {
-      Alert.alert("Erro", "Digite seu nome!");
-    }
-  }
-
-  function foco() {
-    setCorInput("orange");
-  }
-
-  function blur() {
-    setCorInput("#ffff00");
-  }
-
-  function slider1() {
-    const cor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    setCorTexto(cor);
-  }
-
-  function slider2() {
-    const cor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    setCorFundo(cor);
-  }
-
-  return (
-    <View style={[estilos.conteudo, { backgroundColor: corFundo }]}>
+    <View style={estilos.card}>
 
       <Text style={[estilos.textoConteudo, { color: corTexto }]}>
         {texto}
@@ -52,37 +13,42 @@ export default function Conteudo() {
         onChangeText={setNome}
         onFocus={foco}
         onBlur={blur}
+        placeholder="Digite seu nome"
       />
 
-      <Text style={estilos.textoConteudo}>Slider 1</Text>
+      <View style={estilos.blocoSlider}>
+        <Text style={estilos.textoConteudo}>Slider 1 (texto)</Text>
 
-      <Slider
-        minimumValue={0}
-        maximumValue={100}
-        step={5}
-        onValueChange={slider1}
-      />
+        <Slider
+          minimumValue={0}
+          maximumValue={100}
+          step={5}
+          onValueChange={slider1}
+        />
+      </View>
 
-      <Text style={estilos.textoConteudo}>Slider 2</Text>
+      <View style={estilos.blocoSlider}>
+        <Text style={estilos.textoConteudo}>Slider 2 (fundo)</Text>
 
-      <Slider
-        minimumValue={0}
-        maximumValue={100}
-        step={10}
-        minimumTrackTintColor="white"
-        maximumTrackTintColor="red"
-        onValueChange={slider2}
-      />
+        <Slider
+          minimumValue={0}
+          maximumValue={100}
+          step={10}
+          minimumTrackTintColor="white"
+          maximumTrackTintColor="red"
+          onValueChange={slider2}
+        />
+      </View>
 
       <TouchableHighlight
         style={estilos.botaoConteudo}
         onPress={verifica}
       >
-        <Text style={{ color: "#fff", textAlign: "center" }}>
+        <Text style={{ color: "#fff", textAlign: "center", fontWeight: "bold" }}>
           CLIQUE AQUI
         </Text>
       </TouchableHighlight>
 
     </View>
-  );
-}
+  </View>
+);

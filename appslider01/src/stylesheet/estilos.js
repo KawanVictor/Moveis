@@ -3,66 +3,82 @@ import { StyleSheet } from 'react-native';
 export const estilos = StyleSheet.create({
 
   cabecalho: {
-    backgroundColor: '#fff',
-    padding: 15,
+    backgroundColor: '#111',
+    padding: 20,
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomWidth: 3,
+    borderBottomColor: '#ff0000',
   },
 
   textoCabecalho: {
     fontSize: 18,
-    fontWeight: '600',
-    color: '#333',
+    fontWeight: 'bold',
+    color: '#fff',
+    marginTop: 8,
   },
 
   logo: {
-    width: 60,
-    height: 60,
-    marginBottom: 5,
+    width: 70,
+    height: 70,
+    resizeMode: 'contain',
   },
 
   conteudo: {
     flex: 1,
+    backgroundColor: '#f2f2f2',
+    padding: 15,
+    justifyContent: 'center',
+  },
+
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 14,
     padding: 20,
+    elevation: 4,
   },
 
   textoConteudo: {
     fontSize: 14,
-    marginBottom: 10,
-    color: '#333',
+    marginBottom: 12,
+    color: '#222',
+    textAlign: 'center',
   },
 
   entradaTextoConteudo: {
     borderWidth: 1,
     borderColor: '#ddd',
-    padding: 10,
-    borderRadius: 8,
+    padding: 12,
+    borderRadius: 10,
     marginBottom: 15,
   },
 
+  blocoSlider: {
+    marginVertical: 10,
+  },
+
   botaoConteudo: {
-    backgroundColor: '#333',
-    padding: 10,
+    backgroundColor: '#cc0000',
+    padding: 12,
+    borderRadius: 10,
     marginTop: 15,
-    borderRadius: 8,
   },
 
   rodape: {
+    backgroundColor: '#111',
     padding: 15,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
     alignItems: 'center',
+    borderTopWidth: 2,
+    borderTopColor: '#cc0000',
   },
 
   textoRodape: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
 
   imgRodape: {
-    width: 30,
-    height: 30,
-    marginRight: 5,
+    width: 28,
+    height: 28,
+    marginRight: 6,
   },
 });
